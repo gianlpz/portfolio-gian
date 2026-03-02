@@ -118,6 +118,41 @@ export function Projects() {
             </div>
           </div>
         </Link>
+
+        <Link
+          href="/healthbridge"
+          className="project-card block hover:scale-[1.02] transition-transform mt-8"
+        >
+          <div className="h-56 md:h-64 bg-gradient-to-br from-[#0d9488] via-[#14b8a6] to-[#2dd4bf] flex items-center justify-center rounded-t-xl">
+            <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HealthBridge logo">
+              <rect width="120" height="120" rx="28" fill="rgba(255,255,255,0.15)"/>
+              <rect x="50" y="30" width="20" height="60" rx="4" fill="white" opacity="0.9"/>
+              <rect x="30" y="50" width="60" height="20" rx="4" fill="white" opacity="0.9"/>
+              <circle cx="30" cy="30" r="4" fill="white" opacity="0.4"/>
+              <circle cx="90" cy="30" r="4" fill="white" opacity="0.4"/>
+              <circle cx="30" cy="90" r="4" fill="white" opacity="0.4"/>
+              <circle cx="90" cy="90" r="4" fill="white" opacity="0.4"/>
+              <line x1="34" y1="30" x2="50" y2="40" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+              <line x1="86" y1="30" x2="70" y2="40" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+              <line x1="34" y1="90" x2="50" y2="80" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+              <line x1="86" y1="90" x2="70" y2="80" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+            </svg>
+          </div>
+          <div className="p-6">
+            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
+              HealthBridge
+            </h3>
+            <p className="text-white/60 text-sm md:text-base">
+              An AI symptom triage assistant powered by RAG, tool use, and
+              multi-step reasoning.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="meta-badge">AI Engineering</span>
+              <span className="meta-badge">RAG</span>
+              <span className="meta-badge">Next.js 16</span>
+            </div>
+          </div>
+        </Link>
       </div>
     </section>
   );
