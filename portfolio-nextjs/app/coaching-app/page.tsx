@@ -239,7 +239,7 @@ function Personas() {
     {
       name: "Carlos",
       subtitle: "24, Junior Marketing Coordinator",
-      emoji: "\ud83d\udc68\u200d\ud83d\udcbc",
+      emoji: "\ud83d\udc68\ud83c\udffb",
       gradient: "from-[#8B7355] to-[#A09078]",
       quote:
         "I want to grow but can\u2019t afford a coach and don\u2019t know where to start.",
@@ -260,7 +260,7 @@ function Personas() {
     {
       name: "Maya",
       subtitle: "29, UX Designer (Remote)",
-      emoji: "\ud83d\udc69\u200d\ud83d\udcbb",
+      emoji: "\ud83e\uddd5\ud83c\udffb",
       gradient: "from-[#C4917B] to-[#E8B4A0]",
       quote:
         "I want to improve my relationship but therapy feels too heavy for what I need.",
@@ -281,7 +281,7 @@ function Personas() {
     {
       name: "Brandon",
       subtitle: "32, Software Engineer",
-      emoji: "\ud83d\udc68\u200d\ud83d\udcbb",
+      emoji: "\ud83d\udc68\ud83c\udffe\u200d\ud83d\udcbb",
       gradient: "from-[#8A9E82] to-[#6B8F5E]",
       quote:
         "I make good money but I\u2019m burned out and my relationship is suffering.",
@@ -302,7 +302,7 @@ function Personas() {
     {
       name: "Daniela",
       subtitle: "22, Recent Graduate, Part-time Barista",
-      emoji: "\ud83d\udc69\u200d\ud83c\udf93",
+      emoji: "\ud83d\udc69\ud83c\udfff\u200d\ud83c\udf93",
       gradient: "from-[#B8860B] to-[#DAA520]",
       quote:
         "I feel behind everyone my age and don\u2019t know what direction to go.",
@@ -323,7 +323,7 @@ function Personas() {
     {
       name: "Sam",
       subtitle: "38, Operations Manager",
-      emoji: "\ud83d\udc68\u200d\ud83d\udcbc",
+      emoji: "\ud83e\uddd4\ud83c\udffe",
       gradient: "from-[#6B7B8D] to-[#8B9DAF]",
       quote:
         "I\u2019m stable but unfulfilled \u2014 I want to reinvent myself but I have responsibilities.",

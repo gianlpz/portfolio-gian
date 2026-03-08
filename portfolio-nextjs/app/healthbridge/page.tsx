@@ -21,80 +21,39 @@ function CaseHero() {
             aria-label="HealthBridge logo"
           >
             <defs>
-              <linearGradient
-                id="hero-hb-bg"
-                x1="0"
-                y1="0"
-                x2="120"
-                y2="120"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0%" stopColor="#0d9488" />
-                <stop offset="100%" stopColor="#2dd4bf" />
+              <linearGradient id="hero-hb-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#0d9488" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#065f5b" stopOpacity="0.5" />
               </linearGradient>
+              <linearGradient id="hero-hb-cross" x1="30" y1="30" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+                <stop offset="100%" stopColor="#99f6e4" stopOpacity="0.8" />
+              </linearGradient>
+              <linearGradient id="hero-hb-shine" x1="0" y1="0" x2="120" y2="60" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="white" stopOpacity="0.5" />
+                <stop offset="50%" stopColor="white" stopOpacity="0" />
+              </linearGradient>
+              <filter id="hero-hb-glow">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
             </defs>
             <rect width="120" height="120" rx="28" fill="url(#hero-hb-bg)" />
-            {/* Medical cross */}
-            <rect
-              x="50"
-              y="30"
-              width="20"
-              height="60"
-              rx="4"
-              fill="white"
-              opacity="0.9"
-            />
-            <rect
-              x="30"
-              y="50"
-              width="60"
-              height="20"
-              rx="4"
-              fill="white"
-              opacity="0.9"
-            />
-            {/* Circuit nodes */}
-            <circle cx="30" cy="30" r="4" fill="white" opacity="0.4" />
-            <circle cx="90" cy="30" r="4" fill="white" opacity="0.4" />
-            <circle cx="30" cy="90" r="4" fill="white" opacity="0.4" />
-            <circle cx="90" cy="90" r="4" fill="white" opacity="0.4" />
-            {/* Circuit lines */}
-            <line
-              x1="34"
-              y1="30"
-              x2="50"
-              y2="40"
-              stroke="white"
-              strokeWidth="1.5"
-              opacity="0.3"
-            />
-            <line
-              x1="86"
-              y1="30"
-              x2="70"
-              y2="40"
-              stroke="white"
-              strokeWidth="1.5"
-              opacity="0.3"
-            />
-            <line
-              x1="34"
-              y1="90"
-              x2="50"
-              y2="80"
-              stroke="white"
-              strokeWidth="1.5"
-              opacity="0.3"
-            />
-            <line
-              x1="86"
-              y1="90"
-              x2="70"
-              y2="80"
-              stroke="white"
-              strokeWidth="1.5"
-              opacity="0.3"
-            />
+            <rect x="0" y="0" width="120" height="55" rx="28" fill="rgba(255,255,255,0.1)" />
+            <g transform="translate(60,60)">
+              <circle r="36" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="1.5" />
+              <rect x="-10" y="-30" width="20" height="60" rx="4" fill="url(#hero-hb-cross)" />
+              <rect x="-30" y="-10" width="60" height="20" rx="4" fill="url(#hero-hb-cross)" />
+            </g>
+            <polygon points="60,10 35,45 60,38" fill="url(#hero-hb-shine)" opacity="0.4" />
+            <circle cx="30" cy="30" r="3" fill="white" opacity="0.5" filter="url(#hero-hb-glow)" />
+            <circle cx="90" cy="30" r="2.5" fill="white" opacity="0.4" filter="url(#hero-hb-glow)" />
+            <circle cx="30" cy="90" r="2.5" fill="white" opacity="0.3" filter="url(#hero-hb-glow)" />
+            <circle cx="90" cy="90" r="3" fill="white" opacity="0.4" filter="url(#hero-hb-glow)" />
+            <line x1="33" y1="30" x2="50" y2="42" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
+            <line x1="87" y1="30" x2="70" y2="42" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round" />
+            <line x1="33" y1="90" x2="50" y2="78" stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeLinecap="round" />
+            <line x1="87" y1="90" x2="70" y2="78" stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeLinecap="round" />
           </svg>
         </div>
 

@@ -298,7 +298,7 @@ function Personas() {
                       : "bg-gradient-to-br from-teal to-[#2a9d8f]"
                   }`}
                 >
-                  {persona.avatar === "lorraine" ? "\ud83d\udc69\u200d\ud83d\udcbc" : "\ud83d\udc68\u200d\ud83e\uddb3"}
+                  {persona.avatar === "lorraine" ? "\ud83d\udc69\ud83c\udfff\u200d\ud83d\udcbc" : "\ud83d\udc68\ud83c\udffb"}
                 </div>
                 <div>
                   <h3 className="text-white text-xl font-semibold">

@@ -17,17 +17,40 @@ export function Projects() {
         >
           <div className="h-56 md:h-64 bg-gradient-to-br from-[#0d9488] via-[#14b8a6] to-[#2dd4bf] flex items-center justify-center rounded-t-xl">
             <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HealthBridge logo">
-              <rect width="120" height="120" rx="28" fill="rgba(255,255,255,0.15)"/>
-              <rect x="50" y="30" width="20" height="60" rx="4" fill="white" opacity="0.9"/>
-              <rect x="30" y="50" width="60" height="20" rx="4" fill="white" opacity="0.9"/>
-              <circle cx="30" cy="30" r="4" fill="white" opacity="0.4"/>
-              <circle cx="90" cy="30" r="4" fill="white" opacity="0.4"/>
-              <circle cx="30" cy="90" r="4" fill="white" opacity="0.4"/>
-              <circle cx="90" cy="90" r="4" fill="white" opacity="0.4"/>
-              <line x1="34" y1="30" x2="50" y2="40" stroke="white" strokeWidth="1.5" opacity="0.3"/>
-              <line x1="86" y1="30" x2="70" y2="40" stroke="white" strokeWidth="1.5" opacity="0.3"/>
-              <line x1="34" y1="90" x2="50" y2="80" stroke="white" strokeWidth="1.5" opacity="0.3"/>
-              <line x1="86" y1="90" x2="70" y2="80" stroke="white" strokeWidth="1.5" opacity="0.3"/>
+              <defs>
+                <linearGradient id="hb-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#0d9488" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#065f5b" stopOpacity="0.5"/>
+                </linearGradient>
+                <linearGradient id="hb-cross" x1="30" y1="30" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="white" stopOpacity="0.95"/>
+                  <stop offset="100%" stopColor="#99f6e4" stopOpacity="0.8"/>
+                </linearGradient>
+                <linearGradient id="hb-shine" x1="0" y1="0" x2="120" y2="60" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="white" stopOpacity="0.5"/>
+                  <stop offset="50%" stopColor="white" stopOpacity="0"/>
+                </linearGradient>
+                <filter id="hb-glow">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <rect width="120" height="120" rx="28" fill="url(#hb-bg)"/>
+              <rect x="0" y="0" width="120" height="55" rx="28" fill="rgba(255,255,255,0.1)"/>
+              <g transform="translate(60,60)">
+                <circle r="36" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="1.5"/>
+                <rect x="-10" y="-30" width="20" height="60" rx="4" fill="url(#hb-cross)"/>
+                <rect x="-30" y="-10" width="60" height="20" rx="4" fill="url(#hb-cross)"/>
+              </g>
+              <polygon points="60,10 35,45 60,38" fill="url(#hb-shine)" opacity="0.4"/>
+              <circle cx="30" cy="30" r="3" fill="white" opacity="0.5" filter="url(#hb-glow)"/>
+              <circle cx="90" cy="30" r="2.5" fill="white" opacity="0.4" filter="url(#hb-glow)"/>
+              <circle cx="30" cy="90" r="2.5" fill="white" opacity="0.3" filter="url(#hb-glow)"/>
+              <circle cx="90" cy="90" r="3" fill="white" opacity="0.4" filter="url(#hb-glow)"/>
+              <line x1="33" y1="30" x2="50" y2="42" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round"/>
+              <line x1="87" y1="30" x2="70" y2="42" stroke="rgba(255,255,255,0.3)" strokeWidth="1" strokeLinecap="round"/>
+              <line x1="33" y1="90" x2="50" y2="78" stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeLinecap="round"/>
+              <line x1="87" y1="90" x2="70" y2="78" stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeLinecap="round"/>
             </svg>
           </div>
           <div className="p-6">
@@ -47,16 +70,96 @@ export function Projects() {
         </Link>
 
         <Link
+          href="/nhs-visualizer"
+          className="project-card block hover:scale-[1.02] transition-transform mt-8"
+        >
+          <div className="h-56 md:h-64 bg-gradient-to-br from-[#005eb8] via-[#0072ce] to-[#41b6e6] flex items-center justify-center rounded-t-xl">
+            <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="NHS Wait Times logo">
+              <defs>
+                <linearGradient id="nhs-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#005eb8" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#003d7a" stopOpacity="0.5"/>
+                </linearGradient>
+                <linearGradient id="nhs-bar" x1="25" y1="40" x2="99" y2="100" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="white" stopOpacity="0.95"/>
+                  <stop offset="100%" stopColor="#93c5fd" stopOpacity="0.75"/>
+                </linearGradient>
+                <linearGradient id="nhs-shine" x1="0" y1="0" x2="120" y2="60" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="white" stopOpacity="0.5"/>
+                  <stop offset="50%" stopColor="white" stopOpacity="0"/>
+                </linearGradient>
+                <filter id="nhs-glow">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <rect width="120" height="120" rx="28" fill="url(#nhs-bg)"/>
+              <rect x="0" y="0" width="120" height="55" rx="28" fill="rgba(255,255,255,0.1)"/>
+              <circle cx="60" cy="65" r="38" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5"/>
+              <rect x="25" y="75" width="14" height="25" rx="4" fill="url(#nhs-bar)"/>
+              <rect x="45" y="55" width="14" height="45" rx="4" fill="url(#nhs-bar)"/>
+              <rect x="65" y="40" width="14" height="60" rx="4" fill="url(#nhs-bar)"/>
+              <rect x="85" y="60" width="14" height="40" rx="4" fill="url(#nhs-bar)"/>
+              <polygon points="60,8 35,42 60,36" fill="url(#nhs-shine)" opacity="0.4"/>
+              <circle cx="32" cy="68" r="3" fill="white" opacity="0.6" filter="url(#nhs-glow)"/>
+              <circle cx="52" cy="48" r="3" fill="white" opacity="0.6" filter="url(#nhs-glow)"/>
+              <circle cx="72" cy="33" r="3" fill="white" opacity="0.6" filter="url(#nhs-glow)"/>
+              <circle cx="92" cy="53" r="3" fill="white" opacity="0.6" filter="url(#nhs-glow)"/>
+              <line x1="32" y1="68" x2="52" y2="48" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" filter="url(#nhs-glow)"/>
+              <line x1="52" y1="48" x2="72" y2="33" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" filter="url(#nhs-glow)"/>
+              <line x1="72" y1="33" x2="92" y2="53" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" filter="url(#nhs-glow)"/>
+            </svg>
+          </div>
+          <div className="p-6">
+            <h3 className="text-white text-lg md:text-xl font-semibold mb-2">
+              NHS Wait Times
+            </h3>
+            <p className="text-white/60 text-sm md:text-base">
+              A dashboard visualizing NHS hospital wait times across 500+
+              providers using official RTT data.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="meta-badge">Data Visualization</span>
+              <span className="meta-badge">Public Data</span>
+              <span className="meta-badge">Next.js 16</span>
+            </div>
+          </div>
+        </Link>
+
+        <Link
           href="/ux-research"
           className="project-card block hover:scale-[1.02] transition-transform mt-8"
         >
           <div className="h-56 md:h-64 bg-gradient-to-br from-[#f97316] via-[#f472b6] to-[#ec4899] flex items-center justify-center rounded-t-xl">
             <svg className="w-28 h-28 md:w-32 md:h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UX Research App logo">
-              <rect width="120" height="120" rx="28" fill="rgba(255,255,255,0.15)"/>
-              <circle cx="52" cy="52" r="22" stroke="white" strokeWidth="5" fill="none" opacity="0.9"/>
-              <line x1="68" y1="68" x2="88" y2="88" stroke="white" strokeWidth="5" strokeLinecap="round" opacity="0.9"/>
-              <circle cx="52" cy="46" r="7" fill="white" opacity="0.7"/>
-              <path d="M40 64 Q46 56 52 56 Q58 56 64 64" stroke="white" strokeWidth="3" fill="none" opacity="0.7" strokeLinecap="round"/>
+              <defs>
+                <linearGradient id="ux-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#f97316" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#be185d" stopOpacity="0.5"/>
+                </linearGradient>
+                <linearGradient id="ux-glass" x1="30" y1="30" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="white" stopOpacity="0.95"/>
+                  <stop offset="100%" stopColor="#fda4af" stopOpacity="0.8"/>
+                </linearGradient>
+                <linearGradient id="ux-shine" x1="0" y1="0" x2="120" y2="60" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="white" stopOpacity="0.5"/>
+                  <stop offset="50%" stopColor="white" stopOpacity="0"/>
+                </linearGradient>
+                <filter id="ux-glow">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <rect width="120" height="120" rx="28" fill="url(#ux-bg)"/>
+              <rect x="0" y="0" width="120" height="55" rx="28" fill="rgba(255,255,255,0.1)"/>
+              <circle cx="60" cy="60" r="38" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5"/>
+              <circle cx="52" cy="52" r="22" stroke="url(#ux-glass)" strokeWidth="4.5" fill="none"/>
+              <line x1="68" y1="68" x2="88" y2="88" stroke="url(#ux-glass)" strokeWidth="5" strokeLinecap="round" filter="url(#ux-glow)"/>
+              <circle cx="52" cy="46" r="7" fill="url(#ux-glass)"/>
+              <path d="M40 64 Q46 56 52 56 Q58 56 64 64" stroke="url(#ux-glass)" strokeWidth="3" fill="none" strokeLinecap="round"/>
+              <polygon points="60,8 35,42 60,36" fill="url(#ux-shine)" opacity="0.4"/>
+              <circle cx="38" cy="35" r="2" fill="white" opacity="0.6" filter="url(#ux-glow)"/>
+              <circle cx="88" cy="88" r="2.5" fill="white" opacity="0.7" filter="url(#ux-glow)"/>
             </svg>
           </div>
           <div className="p-6">

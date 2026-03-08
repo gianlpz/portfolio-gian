@@ -21,49 +21,33 @@ function CaseHero() {
             aria-label="UX Research App logo"
           >
             <defs>
-              <linearGradient
-                id="hero-ux-bg"
-                x1="0"
-                y1="0"
-                x2="120"
-                y2="120"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0%" stopColor="#f97316" />
-                <stop offset="100%" stopColor="#ec4899" />
+              <linearGradient id="hero-ux-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#f97316" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#be185d" stopOpacity="0.5" />
               </linearGradient>
+              <linearGradient id="hero-ux-glass" x1="30" y1="30" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+                <stop offset="100%" stopColor="#fda4af" stopOpacity="0.8" />
+              </linearGradient>
+              <linearGradient id="hero-ux-shine" x1="0" y1="0" x2="120" y2="60" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="white" stopOpacity="0.5" />
+                <stop offset="50%" stopColor="white" stopOpacity="0" />
+              </linearGradient>
+              <filter id="hero-ux-glow">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
             </defs>
             <rect width="120" height="120" rx="28" fill="url(#hero-ux-bg)" />
-            {/* Magnifying glass */}
-            <circle
-              cx="52"
-              cy="52"
-              r="22"
-              stroke="white"
-              strokeWidth="5"
-              fill="none"
-              opacity="0.9"
-            />
-            <line
-              x1="68"
-              y1="68"
-              x2="88"
-              y2="88"
-              stroke="white"
-              strokeWidth="5"
-              strokeLinecap="round"
-              opacity="0.9"
-            />
-            {/* User silhouette inside lens */}
-            <circle cx="52" cy="46" r="7" fill="white" opacity="0.7" />
-            <path
-              d="M40 64 Q46 56 52 56 Q58 56 64 64"
-              stroke="white"
-              strokeWidth="3"
-              fill="none"
-              opacity="0.7"
-              strokeLinecap="round"
-            />
+            <rect x="0" y="0" width="120" height="55" rx="28" fill="rgba(255,255,255,0.1)" />
+            <circle cx="60" cy="60" r="38" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5" />
+            <circle cx="52" cy="52" r="22" stroke="url(#hero-ux-glass)" strokeWidth="4.5" fill="none" />
+            <line x1="68" y1="68" x2="88" y2="88" stroke="url(#hero-ux-glass)" strokeWidth="5" strokeLinecap="round" filter="url(#hero-ux-glow)" />
+            <circle cx="52" cy="46" r="7" fill="url(#hero-ux-glass)" />
+            <path d="M40 64 Q46 56 52 56 Q58 56 64 64" stroke="url(#hero-ux-glass)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <polygon points="60,8 35,42 60,36" fill="url(#hero-ux-shine)" opacity="0.4" />
+            <circle cx="38" cy="35" r="2" fill="white" opacity="0.6" filter="url(#hero-ux-glow)" />
+            <circle cx="88" cy="88" r="2.5" fill="white" opacity="0.7" filter="url(#hero-ux-glow)" />
           </svg>
         </div>
 
