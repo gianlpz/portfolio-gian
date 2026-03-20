@@ -76,7 +76,7 @@ function CaseHero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a
-            href="https://access4u.vercel.app"
+            href="https://accessibility-fixer.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
@@ -683,7 +683,7 @@ function CTA() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://access4u.vercel.app"
+            href="https://accessibility-fixer.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
